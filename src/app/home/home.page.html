@@ -1,0 +1,35 @@
+<ion-content>
+  <div class="ion-padding" *ngIf="isLoggedIn === true">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Hi, {{users.name}}</ion-card-subtitle>
+        <ion-card-title>{{users.email}}</ion-card-title>
+      </ion-card-header>
+      <img src="{{users.picture.data.url}}" width="100" alt="{{users.name}}" />
+      <ion-card-content>
+        <p>
+          <ion-button expand="full" color="secondary" (click)="logout()">
+            Logout
+            <ion-icon name="log-out"></ion-icon>
+          </ion-button>
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <div class="ion-padding" *ngIf="isLoggedIn === false">
+
+    <h2 class="titulo">xtime</h2>
+
+    <!-- campos de usuario y contraseña -->
+    <ion-input placeholder="correo"></ion-input>
+    <ion-input placeholder="contraseña"></ion-input>
+
+    <ion-button expand="full" class="login-boton" color="secondary">Entrar</ion-button>
+
+    <ion-button expand="full" color="primary" (click)="fbLogin()">
+      Iniciar sesión con facebook
+      <ion-icon  class="espacio" name="logo-facebook"></ion-icon>
+    </ion-button>
+
+  </div>
+</ion-content>

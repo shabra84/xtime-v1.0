@@ -1,0 +1,9 @@
+{
+  "appId": "com.xtime.app",
+  "appName": "xtim",
+  "linuxAndroidStudioPath": "/home/copernico/Escritorio/android-studio/bin/studio.sh",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}

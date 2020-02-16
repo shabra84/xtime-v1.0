@@ -1,0 +1,8 @@
+{
+  "name": "xtime",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

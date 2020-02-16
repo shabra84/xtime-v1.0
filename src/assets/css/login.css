@@ -1,0 +1,29 @@
+:root {
+  /* Set the background of the entire app */
+  --ion-background-color: #9191ff;
+
+  /* Set the font family of the entire app */
+  --ion-font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Roboto", sans-serif;
+}
+
+.native-input.sc-ion-input-md {
+    color: #fff;
+    font-size: 24px;
+}
+
+.espacio{
+  padding: 10px;
+}
+
+.titulo {
+    font-family: 'Modak', cursive;
+    text-align: center;
+    font-size: 49px;
+    margin-bottom: 29px;
+    color: #fff;
+    -webkit-text-stroke: 3px #5f5fea;
+}
+
+.login-boton{
+  margin-bottom: 20px;
+}
