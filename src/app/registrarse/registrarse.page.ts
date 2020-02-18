@@ -12,7 +12,7 @@ export class RegistrarsePage implements OnInit {
 
   usuarios: any;
   usuario: string;
-  contraseña: number;
+  password: number;
 
   constructor(private crudService: CrudService) { }
 
@@ -24,7 +24,7 @@ export class RegistrarsePage implements OnInit {
           id: e.payload.doc.id,
           isEdit: false,
           usuario: e.payload.doc.data()['usuario'],
-          contraseña: e.payload.doc.data()['contraseña']
+          password: e.payload.doc.data()['password']
         };
       })
       console.log(this.usuarios);
@@ -35,10 +35,10 @@ export class RegistrarsePage implements OnInit {
   CreateRecord() {
     let record = {};
     record['usuario'] = this.usuario;
-    record['contraseña'] = this.contraseña;
+    record['password'] = this.password;
     this.crudService.create_NewStudent(record).then(resp => {
       this.usuario = "";
-      this.contraseña = undefined;
+      this.password = undefined;
       console.log(resp);
     })
       .catch(error => {
@@ -53,13 +53,13 @@ export class RegistrarsePage implements OnInit {
   EditRecord(record) {
     record.isEdit = true;
     record.usuario = record.usuario;
-    record.contraseña = record.contraseña;
+    record.password = record.password;
   }
 
   UpdateRecord(recordRow) {
     let record = {};
     record['usuario'] = recordRow.usuario;
-    record['contraseña'] = recordRow.contraseña;
+    record['password'] = recordRow.password;
     this.crudService.update_Student(recordRow.id, record);
     recordRow.isEdit = false;
   }

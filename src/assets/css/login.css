@@ -27,3 +27,11 @@
 .login-boton{
   margin-bottom: 20px;
 }
+
+.ancho-total{
+  width: 100%;
+}
+
+.padding{
+  margin: 5%;
+}
