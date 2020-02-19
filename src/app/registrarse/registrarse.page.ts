@@ -12,7 +12,7 @@ export class RegistrarsePage implements OnInit {
 
   usuarios: any;
   usuario: string;
-  password: number;
+  password: string;
 
   constructor(private crudService: CrudService) { }
 

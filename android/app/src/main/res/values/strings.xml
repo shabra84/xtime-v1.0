@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">xtime</string>
-    <string name="title_activity_main">xtime</string>
+    <string name="app_name">timer</string>
+    <string name="title_activity_main">timer</string>
     <string name="package_name">com.xtime.app</string>
     <string name="custom_url_scheme">com.xtime.app</string>
     <string name="fb_app_id">877078969361936</string>

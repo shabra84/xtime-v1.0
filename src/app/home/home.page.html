@@ -1,35 +1,21 @@
 <ion-content>
-  <div class="ion-padding" *ngIf="isLoggedIn === true">
-    <ion-card>
-      <ion-card-header>
-        <ion-card-subtitle>Hi, {{users.name}}</ion-card-subtitle>
-        <ion-card-title>{{users.email}}</ion-card-title>
-      </ion-card-header>
-      <img src="{{users.picture.data.url}}" width="100" alt="{{users.name}}" />
-      <ion-card-content>
-        <p>
-          <ion-button expand="full" color="secondary" (click)="logout()">
-            Logout
-            <ion-icon name="log-out"></ion-icon>
-          </ion-button>
-        </p>
-      </ion-card-content>
-    </ion-card>
-  </div>
-  <div class="ion-padding" *ngIf="isLoggedIn === false">
+  <div class="ion-padding">
 
-    <h2 class="titulo">xtime</h2>
+    <img class="titulo" src="../assets/img/icon.png" />
 
     <!-- campos de usuario y contraseña -->
-    <ion-input placeholder="correo"></ion-input>
-    <ion-input placeholder="contraseña"></ion-input>
+    <ion-input [(ngModel)]="usuario" placeholder="usuario"></ion-input>
+    <ion-input [(ngModel)]="password" type="password" placeholder="contraseña"></ion-input>
 
-    <ion-button expand="full" class="login-boton" color="secondary">Entrar</ion-button>
+    <ion-button expand="full" class="login-boton" (click)="iniciarSesion(this.usuario, this.password)" color="secondary">Entrar</ion-button>
 
     <ion-button expand="full" color="primary" (click)="fbLogin()">
       Iniciar sesión con facebook
       <ion-icon  class="espacio" name="logo-facebook"></ion-icon>
     </ion-button>
+
+
+    <a href="/registrarse">Registrarse</a>
 
   </div>
 </ion-content>
