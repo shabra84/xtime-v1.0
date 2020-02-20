@@ -40,7 +40,7 @@ export class HomePage implements OnInit{
 }
 
 ngOnInit() {
-  this.crudService.read_Students().subscribe(data => {
+  this.crudService.read_usuario().subscribe(data => {
 
     this.usuarios = data.map(e => {
       return {
@@ -88,7 +88,7 @@ iniciarSesion(usuario: string, password: string) {
 
   this.login = false;
 
-  this.crudService.read_Students().subscribe(async data => {
+  this.crudService.read_usuario().subscribe(async data => {
 
     this.usuarios = data.map(e => {
 
@@ -126,5 +126,9 @@ logout() {
   this.fb.logout()
     .then( res => this.isLoggedIn = false)
     .catch(e => console.log('Error logout from Facebook', e));
+}
+
+IrA(url){
+  this.router.navigateByUrl(url);
 }
 }

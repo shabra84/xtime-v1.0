@@ -4,8 +4,16 @@
 
     <ion-input placeholder="contraseña" type="password" [(ngModel)]="password"></ion-input>
 
+    <ion-input placeholder="Formación academica" [(ngModel)]="formacion"></ion-input>
+
+    <ion-input placeholder="Experiencia laboral" [(ngModel)]="laboral"></ion-input>
+
     <ion-button class="ancho-total" (click)="CreateRecord()">
        Guardar
+    </ion-button>
+
+    <ion-button class="ancho-total" (click)="Volver()">
+       Volver atrás
     </ion-button>
   </div>
 </ion-content>

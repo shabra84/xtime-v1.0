@@ -12,19 +12,19 @@ export class CrudService {
   ) { }
 
 
-  create_NewStudent(record) {
+  create_usuario(record) {
     return this.firestore.collection('usuarios').add(record);
   }
 
-  read_Students() {
+  read_usuario() {
     return this.firestore.collection('usuarios').snapshotChanges();
   }
 
-  update_Student(recordID,record){
+  update_usuario(recordID,record){
     this.firestore.doc('usuarios/' + recordID).update(record);
   }
 
-  delete_Student(record_id) {
+  delete_usuario(record_id) {
     this.firestore.doc('usuarios/' + record_id).delete();
   }
 }
