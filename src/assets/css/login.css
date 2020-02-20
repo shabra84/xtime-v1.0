@@ -52,3 +52,14 @@ a {
     text-decoration: none;
     font-size: 20px;
 }
+
+.titulo-color{
+  color: #fff;
+}
+
+.icono-logout {
+    float: right;
+    font-size: 29px;
+    color: #fff;
+    cursor: pointer;
+}

@@ -55,12 +55,14 @@ ngOnInit() {
   });
 }
 
+/**
+*  Iniciar sesión con facebook.
+**/
 fbLogin() {
   this.fb.login(['public_profile', 'user_friends', 'email'])
     .then(res => {
       if (res.status === 'connected') {
         this.isLoggedIn = true;
-
         //redirecciona a la página de inicio.
         this.router.navigateByUrl('/principal');
 
@@ -95,6 +97,9 @@ iniciarSesion(usuario: string, password: string) {
       //asignamos usuario y contraseña
       this.usuarioBD = e.payload.doc.data()['usuario'];
       this.passwordBD = e.payload.doc.data()['password'];
+
+      //alamcenamos el usuario para usarlo en diferntes vistas.
+      localStorage.setItem('usuario',this.usuarioBD);
 
       //si son iguales usuario y contraseña, entramos en la app.
       if(this.usuarioBD == usuario && this.passwordBD == password){
